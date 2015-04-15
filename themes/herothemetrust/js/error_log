@@ -1,0 +1,5 @@
+[21-Feb-2014 20:03:39 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/homeharv/public_html/new/wp-content/themes/herothemetrust/js/index.php on line 1
+[18-Jul-2014 20:51:56 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/homeharv/public_html/new/wp-content/themes/herothemetrust/js/index.php on line 1
+[18-Jul-2014 20:57:22 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/homeharv/public_html/new/wp-content/themes/herothemetrust/js/index.php on line 1
+[29-Nov-2014 11:52:34 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/homeharv/public_html/new/wp-content/themes/herothemetrust/js/index.php on line 1
+[21-Feb-2015 02:18:30 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/homeharv/public_html/new/wp-content/themes/herothemetrust/js/index.php on line 1
