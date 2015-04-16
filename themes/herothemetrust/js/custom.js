@@ -128,7 +128,7 @@ window.onload = function(){
 	$(".modal--close").on("click", function(){ 
 	  Modal.close();
 	});
-	$("#menu-item-660, .watch-video").on("click" , function(){
+	$("#menu-item-662, .watch-video").on("click" , function(){
   	 Modal.open();
 	})
 }

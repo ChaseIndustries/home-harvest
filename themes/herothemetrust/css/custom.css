@@ -25,7 +25,7 @@ input[type='submit'].ninja-forms-field {
 	font-size:16px;
 }
 /* watch video link */
-#menu-item-660, .watch-video {
+#menu-item-662, .watch-video {
 	background: #DEDEDE;
 	
 	font-family:"muli",arial, sans-serif;
@@ -37,13 +37,13 @@ input[type='submit'].ninja-forms-field {
 	border-radius: 3px;
 	cursor: pointer;
 }
-#menu-item-660:hover {
+#menu-item-662:hover {
   border-color:#CCCCCC;
 }
-#menu-item-660 a:hover {
+#menu-item-662 a:hover {
   color:#545454 !important;
 }
-#menu-item-660 a::before {
+#menu-item-662 a::before {
   content:url("../images/play.svg");
   width:20px;
   height:20px;
