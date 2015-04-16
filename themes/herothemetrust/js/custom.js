@@ -18,8 +18,9 @@ window.onload = function(){
   	self.open = function(){
     	$self.fadeIn(300).addClass("active");
     	$("body").addClass("freeze");
+    	player.playVideo();
     	$("#overlay").fadeIn(300);
-    	//player.playVideo();
+    	
   	}
 	};
 	Modal = new modal();
@@ -27,15 +28,6 @@ window.onload = function(){
 	if($("#logo img").length){
 		$("#logo img").fadeIn(2000);
 	}
-		/*$(window).scroll(function(){
-			var st = $(this).scrollTop();
-			if(st >= headerOffset && $(window).width() > 1000){
-				$("#header .inside").addClass("fixed");
-			} else {
-				$("#header .inside").removeClass("fixed");
-			}
-		});
-		$(window).scroll();*/
 	var adjustSize = function(){
 		var homeHeight = $("#homeBanner").height();
 		defMargin = [];
