@@ -27,7 +27,8 @@ input[type='submit'].ninja-forms-field {
 /* watch video link */
 #menu-item-662, .watch-video {
 	background: #DEDEDE;
-	
+	display:inline-block;
+	color:#545454;
 	font-family:"muli",arial, sans-serif;
 	text-align:center;
 	line-height:40px;
