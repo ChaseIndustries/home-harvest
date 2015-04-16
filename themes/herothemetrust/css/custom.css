@@ -44,7 +44,7 @@ input[type='submit'].ninja-forms-field {
 #menu-item-662 a:hover {
   color:#545454 !important;
 }
-#menu-item-662 a::before {
+#menu-item-662 a::before, #menu-item-662 span::before {
   content:url("../images/play.svg");
   width:20px;
   height:20px;
