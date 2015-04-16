@@ -23,7 +23,6 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Racing Sans One:regular,bold" />
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=The Girl Next Door:regular,bold" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/colorbox.css" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/custom.css" />
 <?php $heading_font = of_get_option('ttrust_heading_font'); ?>
 <?php $body_font = of_get_option('ttrust_body_font'); ?>
 <?php $banner_main_font = of_get_option('ttrust_banner_main_font'); ?>
@@ -63,7 +62,59 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=131407720278257&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script><div id="container">
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="overlay"></div>
+<div id="video-modal" class="modal">
+  <a href="javascript:;" class="modal--close">&times;</a>
+  <div id="player"></div>
+</div>
+<script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        var winHeight = window.innerHeight;
+        var vidHeight = winHeight - ( .2 * winHeight );
+        var width = ( vidHeight  * 1.77 ) + "px";
+        document.getElementById("video-modal").setAttribute('style', 'width:' + width + ";height:"+vidHeight + "px");
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'RLUh-ip5MTw',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+<div id="container">
 <div class="wrap">
   <div id="page_top">
     <div id="logo">

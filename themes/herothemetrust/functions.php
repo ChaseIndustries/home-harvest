@@ -68,6 +68,8 @@ function ttrust_scripts() {
 	
 	wp_enqueue_style('superfish', get_bloginfo('template_url').'/css/superfish.css', false, '1.4.8', 'all' );	
 	
+	wp_enqueue_style('custom', get_bloginfo('template_url').'/css/custom.css', false, '1.4.8', 'all' );	
+	
 	if(is_active_widget(false,'','ttrust_flickr')) :	
     	wp_enqueue_script('flickrfeed', get_bloginfo('template_url').'/js/jflickrfeed.js', array('jquery'), '0.8', true);
 	endif;

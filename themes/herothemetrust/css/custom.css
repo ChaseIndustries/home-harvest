@@ -6,15 +6,16 @@ input[type='submit'].ninja-forms-field {
 .ninja-forms-required-items, .ninja-forms-req-symbol {
 	display: none;
 }
-#menu-item-623 , .contact_link {
-	background: #7aa942;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdhYTk0MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1ZDkxMWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #7aa942 0%, #5d911d 100%);
+/* schedule a consultation link */
+#menu-item-623, .contact_link {
+	border:1px solid #fff;
+	background: #7AC142;
+  background: -moz-linear-gradient(top,  #7AC142 0%, #5d911d 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7aa942), color-stop(100%,#5d911d));
-  background: -webkit-linear-gradient(top,  #7aa942 0%,#5d911d 100%);
-  background: -o-linear-gradient(top,  #7aa942 0%,#5d911d 100%);
-  background: -ms-linear-gradient(top,  #7aa942 0%,#5d911d 100%);
-  background: linear-gradient(to bottom,  #7aa942 0%,#5d911d 4100%);
+  background: -webkit-linear-gradient(top,  #7AC1420%,#5d911d 100%);
+  background: -o-linear-gradient(top,  #7AC142 0%,#5d911d 100%);
+  background: -ms-linear-gradient(top,  #7AC142 0%,#5d911d 100%);
+  background: linear-gradient(to bottom,  #7AC142 0%,#5d911d 4100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7aa942', endColorstr='#5d911d',GradientType=0 ); 
 	border-radius: 3px;
 	font-family:"muli",arial, sans-serif;
@@ -23,11 +24,41 @@ input[type='submit'].ninja-forms-field {
 	padding:0 10px;
 	font-size:16px;
 }
+/* watch video link */
+#menu-item-660, .watch-video {
+	background: #DEDEDE;
+	
+	font-family:"muli",arial, sans-serif;
+	text-align:center;
+	line-height:40px;
+	padding:0 10px;
+	font-size:16px;
+	border:1px solid #fff;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#menu-item-660:hover {
+  border-color:#CCCCCC;
+}
+#menu-item-660 a:hover {
+  color:#545454 !important;
+}
+#menu-item-660 a::before {
+  content:url("../images/play.svg");
+  width:20px;
+  height:20px;
+  display:inline-block;
+  vertical-align: sub;
+  margin-right:5px;
+}
 #menu-item-623 a, .contact_link a, .contact_link {
   color:#fff !important;
 }
+#menu-item-623:hover, .contact_link:hover {
+  border-color:#71AF3D;
+}
 #menu-item-623 a:hover , .contact_link a:hover, .contact_link:hover {
-  color:#ececec !important;
+  color:#fff !important;
 }
 .contact_link {
 	display:block;
@@ -80,10 +111,10 @@ input[type='submit'].ninja-forms-field {
 	transition: all .3s linear;
 }
 #mainNav ul li.sfHover a, #mainNav ul li a:hover, #mainNav ul li, #mainNav ul li a, #mainNav ul li a, #mainNav ul li {
-	-webkit-transition: all .1s linear;
-	-moz-transition: all .1s linear;
-	-o-transition: all .1s linear;
-	transition: all .1s linear;
+	-webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-o-transition: color .1s linear;
+	transition: color .1s linear;
 }
 #header {
 	min-height: 0;
@@ -614,3 +645,47 @@ HONEYPOT
 .honeypot-wrap {
     display: none;
 }
+
+/**
+ * Modal Styles
+ */
+ body.freeze {
+   position: fixed;
+   left:0;
+   top:0;
+   height:100%;
+   width:100%;
+ }
+ #overlay {
+   min-height: 100%;
+   background: #000;
+   left:0;
+   top:0;
+   background: rgba(0,0,0,.7);
+   width: 100%;
+   position: fixed;
+   z-index: 100;
+   display:none;
+ }
+ .modal {
+ display:none;
+   position:absolute;
+   position: absolute;
+  transform: translateX(-50%);
+  left:50%;
+   padding: 15px;
+   background: #000;
+   z-index:101;
+   top:10%;
+ }
+ .modal .modal--close {
+   position: absolute;
+   right: 15px;
+   top: 15px;
+   padding:15px;
+   color:#fff;
+   display: block;
+   font-size:3em;
+ }
+
+ 
