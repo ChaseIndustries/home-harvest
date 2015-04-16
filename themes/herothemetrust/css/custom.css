@@ -38,10 +38,10 @@ input[type='submit'].ninja-forms-field {
 	border-radius: 3px;
 	cursor: pointer;
 }
-#menu-item-662:hover {
+#menu-item-662:hover, .watch-video:hover {
   border-color:#CCCCCC;
 }
-#menu-item-662 a:hover {
+#menu-item-662 a:hover, .watch-video:hover {
   color:#545454 !important;
 }
 #menu-item-662 span {
