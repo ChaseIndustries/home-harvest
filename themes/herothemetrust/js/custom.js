@@ -13,6 +13,7 @@ window.onload = function(){
     	$self.fadeOut(300).removeClass("active");
     	$("#overlay").fadeOut(300);
     	$("body").removeClass("freeze");
+    	player.stopVideo();
   	}
   	self.open = function(){
     	$self.fadeIn(300).addClass("active");
